@@ -1,0 +1,45 @@
+﻿<Window x:Class="calculator2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculator2"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.ColumnSpan="5" Text="{Binding ScreenVal}"/>
+        <Button Grid.Row="1" Grid.Column="0" Content="7" Command="{Binding AddNumberCommand}" CommandParameter="7"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="8" Command="{Binding AddNumberCommand}" CommandParameter="8"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="9" Command="{Binding AddNumberCommand}" CommandParameter="9"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="4" Command="{Binding AddNumberCommand}" CommandParameter="4"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="5" Command="{Binding AddNumberCommand}" CommandParameter="5"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="6" Command="{Binding AddNumberCommand}" CommandParameter="6"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="1" Command="{Binding AddNumberCommand}" CommandParameter="1"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="2" Command="{Binding AddNumberCommand}" CommandParameter="2"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="3" Command="{Binding AddNumberCommand}" CommandParameter="3"/>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Command="{Binding AddNumberCommand}" CommandParameter="0"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="," Command="{Binding AddComaCommand}" CommandParameter=","/>
+        <Button Grid.Row="1" Grid.Column="3" Content="/" Command="{Binding AddOperationCommand}" CommandParameter="/"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="-" Command="{Binding AddOperationCommand}" CommandParameter="-"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="*" Command="{Binding AddOperationCommand}" CommandParameter="*"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="C" Command="{Binding ClearScreenCommand}"/>
+        <Button Grid.Row="1" Grid.Column="4" Grid.RowSpan="2" Content="+" Command="{Binding AddOperationCommand}" CommandParameter="+"/>
+        <Button Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" Content="=" Command="{Binding GetResultCommand}"/>
+        
+
+    </Grid>
+</Window>
